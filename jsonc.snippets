@@ -1,0 +1,30 @@
+snippet neoconf-latex-windows 
+	{
+  	"lspconfig": {
+    	"ltex": {
+      	"ltex.language": "en-GB"
+    	},
+    	"texlab": {
+      	"texlab": {
+        	"forwardSearch": {
+          	"executable": "sumatrapdf.exe",
+          	"args": [
+            	"-reuse-instance",
+            	"%p",
+            	"-forward-search",
+            	"%f",
+            	"%l"
+          	]
+        	},
+        	"chktex": {
+          	"onEdit": true
+        	},
+        	"build": {
+          	"onSave": true,
+          	"forwardSearchAfter": true
+        	}
+      	}
+    	}
+  	}
+	}
+
