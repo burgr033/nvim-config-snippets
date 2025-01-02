@@ -1,0 +1,42 @@
+{
+  "ignore_tex": {
+    "prefix": "ignore_tex",
+    "body": [
+      "### TeX ###",
+      "*.aux",
+      "*.log",
+      "*.out",
+      "*.toc",
+      "*.dvi",
+      "*.bbl",
+      "*.bcf",
+      "*.blg",
+      "*.fdb_latexmk",
+      "*.synctex.gz",
+      "",
+      "# Intermediate files",
+      "*-concordance.tex",
+      "*.tikz",
+      "",
+      "# Editors",
+      "*.bak",
+      "*.sav",
+      "$0"
+    ],
+    "description": "GitIgnore for TeX"
+  },
+  "ignore_go": {
+    "prefix": "ignore_go",
+    "body": [
+      "*.exe",
+      "*.dll",
+      "*.so",
+      "*.dylib",
+      "*.test",
+      "*.out",
+      "go.work",
+      "$0"
+    ],
+    "description": "GitIgnore for Go"
+  }
+}

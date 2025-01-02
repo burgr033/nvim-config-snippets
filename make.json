@@ -1,0 +1,30 @@
+{
+  "go-makefile": {
+    "prefix": "go-makefile",
+    "body": [
+      "BINARY_NAME=${1:example}",
+      "",
+      "build:",
+      "\tgo build -o bin/$(BINARY_NAME)",
+      "",
+      "run: build",
+      "\tbin/$(BINARY_NAME)",
+      "",
+      "clean:",
+      "\tgo clean",
+      "\trm bin/*",
+      "",
+      "test:",
+      "\tgo test ./...",
+      "",
+      "test_coverage:",
+      "\tgo test ./... -coverprofile=coverage.out",
+      "",
+      ".PHONY: tidy",
+      "tidy:",
+      "\tgo mod tidy",
+      "$0"
+    ],
+    "description": "Makefile for Go projects with build, run, clean, test, and tidy commands"
+  }
+}

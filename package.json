@@ -1,0 +1,23 @@
+{
+  "name": "personal-snippest",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "gitignore",
+        "path": "./gitignore.json"
+      },
+      {
+        "language": "go",
+        "path": "./go.json"
+      },
+      {
+        "language": "make",
+        "path": "./make.json"
+      },
+      {
+        "language": "jsonc",
+        "path": "./jsonc.json"
+      }
+    ]
+  }
+}
