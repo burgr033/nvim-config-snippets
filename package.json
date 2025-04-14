@@ -3,6 +3,10 @@
   "contributes": {
     "snippets": [
       {
+        "language": "markdown",
+        "path": "./presenterm.json"
+      },
+      {
         "language": "gitignore",
         "path": "./gitignore.json"
       },

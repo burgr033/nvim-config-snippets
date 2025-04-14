@@ -1,0 +1,36 @@
+{
+	"pt_header": {
+		"prefix": "pt_header",
+		"body": [
+			"---",
+		  "title: ${1}",
+		  "sub_title: ${2}",
+		  "author: ${3}",
+		  "date: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
+		  "location: ${4}",
+		  "theme:",
+		  "  name: gruvbox-dark",
+			"options:",
+			"  implicit_slide_ends: true",
+			"  incremental_lists: false",
+			"---"
+		],
+		"description": "Snippet for error handling with log.Printf"
+	},
+	"erriff": {
+		"prefix": "erriff",
+		"body": [
+			"if err != nil {",
+			"    log.Fatal(\"${1}:%v\\n\", err)",
+			"    ${2}",
+			"}",
+			"$0"
+		],
+		"description": "Snippet for error handling with log.Fatal"
+	},
+	"function declaration": {
+		"prefix": "func",
+		"body": "//$1: $4\n func $1($2) $3 {\n\t$0\n}",
+		"description": "Snippet for function declaration"
+	}
+}
