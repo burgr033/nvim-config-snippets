@@ -15,22 +15,6 @@
 			"  incremental_lists: false",
 			"---"
 		],
-		"description": "Snippet for error handling with log.Printf"
-	},
-	"erriff": {
-		"prefix": "erriff",
-		"body": [
-			"if err != nil {",
-			"    log.Fatal(\"${1}:%v\\n\", err)",
-			"    ${2}",
-			"}",
-			"$0"
-		],
-		"description": "Snippet for error handling with log.Fatal"
-	},
-	"function declaration": {
-		"prefix": "func",
-		"body": "//$1: $4\n func $1($2) $3 {\n\t$0\n}",
-		"description": "Snippet for function declaration"
+		"description": "Presenterm header"
 	}
 }
