@@ -1,20 +1,36 @@
 {
-	"pt_header": {
-		"prefix": "pt_header",
-		"body": [
-			"---",
-		  "title: ${1}",
-		  "sub_title: ${2}",
-		  "author: ${3}",
-		  "date: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
-		  "location: ${4}",
-		  "theme:",
-		  "  name: gruvbox-dark",
-			"options:",
-			"  implicit_slide_ends: true",
-			"  incremental_lists: false",
-			"---"
-		],
-		"description": "Presenterm header"
-	}
+  "pt_header": {
+    "prefix": "pt_header",
+    "body": [
+      "---",
+      "title: ${TM_FILENAME_BASE}",
+      "sub_title: ${2:SUBTITLE}",
+      "author: ${3:AUTHOR}",
+      "date: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
+      "location: ${4:LOCATION}",
+      "event: ${5:EVENT}",
+      "theme:",
+      "  name: ${6|gruvbox-custom,th|}",
+      "---"
+    ],
+    "description": "Presenterm header"
+  },
+  "pt_new": {
+    "prefix": "pt_new",
+    "body": ["${1:HEADER}", "===", "${2:CONTENT}"],
+    "description": "new slide"
+  },
+  "pt_interception": {
+    "prefix": "pt_interception",
+    "body": [
+      "<!-- end_slide -->",
+      "<!-- no_footer -->",
+      "<!-- font_size: 2 -->",
+      "<!-- alignment: center -->",
+      "<!-- jump_to_middle -->",
+      "${1:CONTENT}",
+      "==="
+    ],
+    "description": "Interception slide"
+  }
 }
