@@ -5,10 +5,10 @@
       "BINARY_NAME=${1:example}",
       "",
       "build:",
-      "\tgo build -o bin/$(BINARY_NAME)",
+      "\tgo build -o bin/\\$(BINARY_NAME)",
       "",
       "run: build",
-      "\tbin/$(BINARY_NAME)",
+      "\tbin/\\$(BINARY_NAME)",
       "",
       "clean:",
       "\tgo clean",
@@ -26,5 +26,30 @@
       "$0"
     ],
     "description": "Makefile for Go projects with build, run, clean, test, and tidy commands"
+  },
+  "java-makefile": {
+    "prefix": "java-makefile",
+    "body": [
+      "SRC_DIR=src",
+      "TARGET_DIR=target",
+      "MAIN_CLASS=Main",
+      "",
+      "SOURCES=\\$(shell find \\$(SRC_DIR) -name \"*.java\")",
+      "",
+      "all:",
+      "\tmkdir -p \\$(TARGET_DIR)",
+      "\tjavac -d \\$(TARGET_DIR) \\$(SOURCES)",
+      "",
+      "# Run the program from the target directory",
+      "run: all",
+      "\tcd \\$(TARGET_DIR) && java \\$(MAIN_CLASS)",
+      "",
+      "# Clean compiled classes",
+      "clean:",
+      "\trm -rf \\$(TARGET_DIR)",
+      "",
+      ".PHONY: all run clean"
+    ],
+    "description": "Makefile for Java projects with build run clean"
   }
 }
