@@ -7,6 +7,10 @@
         "path": "./presenterm.json"
       },
       {
+        "language": "just",
+        "path": "./justfile.json"
+      },
+      {
         "language": "gitignore",
         "path": "./gitignore.json"
       },
